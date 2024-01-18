@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "description": "Master English pronunciation instantly! Select text, get IPA transcriptions, and speak with confidence using IPA Instant Translator",
+    "name": "PhonetiChrome",
+    "version": "0.1",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "service_worker.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "48": "icon.png"
+    }
+}
